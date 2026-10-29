@@ -34,6 +34,8 @@ public class VeiculoServiceTeste {
         verify(veiculoRepository, times(1)).save(veiculos);
     }
 
+   
+
     @Test 
     void deveListarVeiculos(){
         List<Veiculos> veiculos = new ArrayList<>();

@@ -42,12 +42,12 @@ public class VeiculoController {
         return ResponseEntity.ok(veiculoService.buscarVeiculoPorId(id));
     }    
         
-    @PutMapping("//{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Veiculos> alterarVeiculo(@PathVariable Long id, @RequestBody Veiculos veiculos){
         return ResponseEntity.ok(veiculoService.alterarveiculo(id, veiculos));
     }
 
-    @DeleteMapping("{id")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> excluirVeiculo(@PathVariable Long id){
             veiculoService.deletarVeiculo(id);
             return ResponseEntity.noContent().build();
